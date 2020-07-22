@@ -7,31 +7,49 @@
 //
 
 import UIKit
+import SquareReaderSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window:UIWindow?
+    var storyboard: UIStoryboard?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        SQRDReaderSDK.initialize(applicationLaunchOptions: launchOptions)
+        
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let permissionsGranted = PermissionsViewController.areRequiredPermissionsGranted
+        print("AppDelegate: are required permissions granted?", permissionsGranted)
+//        let readerSDKAuthorized = SQRDReaderSDK.shared.isAuthorized
+
+        if !permissionsGranted {
+            print("AppDelegate: opening permissions view controller...")
+            let permissionsViewController = storyboard?.instantiateViewController(withIdentifier: "PermissionsViewController") as! PermissionsViewController
+            permissionsViewController.delegate = self
+            self.window?.rootViewController = permissionsViewController
+        }
+        
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
 }
 
+// MARK: - PermissionsViewControllerDelegate protocol delegate
+
+extension AppDelegate: PermissionsViewControllerDelegate {
+    
+    func permissionsViewControllerDidObtainRequiredPermissions(_ permissionsViewController: PermissionsViewController){
+        print("Permissions view controller delegate function called....")
+        
+        // Switch back to primary navigation view controller
+        let navigationViewController = storyboard?.instantiateViewController(withIdentifier: "paymentsNavigationController") as! UINavigationController
+        self.window?.rootViewController = navigationViewController
+        
+    }
+    
+}

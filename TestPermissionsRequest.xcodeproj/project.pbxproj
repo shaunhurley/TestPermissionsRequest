@@ -7,23 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2816335E24C74DA800B0FA19 /* SquareReaderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2816335D24C74DA800B0FA19 /* SquareReaderSDK.framework */; };
+		2816335F24C74DA800B0FA19 /* SquareReaderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2816335D24C74DA800B0FA19 /* SquareReaderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28463BF424C72ED600EB3AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28463BF324C72ED600EB3AD5 /* AppDelegate.swift */; };
-		28463BF624C72ED600EB3AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28463BF524C72ED600EB3AD5 /* SceneDelegate.swift */; };
 		28463BF824C72ED600EB3AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28463BF724C72ED600EB3AD5 /* ViewController.swift */; };
 		28463BFB24C72ED600EB3AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28463BF924C72ED600EB3AD5 /* Main.storyboard */; };
 		28463BFD24C72ED700EB3AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28463BFC24C72ED700EB3AD5 /* Assets.xcassets */; };
 		28463C0024C72ED700EB3AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28463BFE24C72ED700EB3AD5 /* LaunchScreen.storyboard */; };
+		28463C0824C7307400EB3AD5 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28463C0724C7307400EB3AD5 /* PermissionsViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2816336024C74DA800B0FA19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2816335F24C74DA800B0FA19 /* SquareReaderSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2816335D24C74DA800B0FA19 /* SquareReaderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SquareReaderSDK.framework; sourceTree = "<group>"; };
 		28463BF024C72ED600EB3AD5 /* TestPermissionsRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPermissionsRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28463BF324C72ED600EB3AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28463BF524C72ED600EB3AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		28463BF724C72ED600EB3AD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28463BFA24C72ED600EB3AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28463BFC24C72ED700EB3AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28463BFF24C72ED700EB3AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28463C0124C72ED700EB3AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28463C0724C7307400EB3AD5 /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2816335E24C74DA800B0FA19 /* SquareReaderSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2816335C24C74DA800B0FA19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2816335D24C74DA800B0FA19 /* SquareReaderSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		28463BE724C72ED600EB3AD5 = {
 			isa = PBXGroup;
 			children = (
 				28463BF224C72ED600EB3AD5 /* TestPermissionsRequest */,
 				28463BF124C72ED600EB3AD5 /* Products */,
+				2816335C24C74DA800B0FA19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +83,8 @@
 		28463BF224C72ED600EB3AD5 /* TestPermissionsRequest */ = {
 			isa = PBXGroup;
 			children = (
+				28463C0724C7307400EB3AD5 /* PermissionsViewController.swift */,
 				28463BF324C72ED600EB3AD5 /* AppDelegate.swift */,
-				28463BF524C72ED600EB3AD5 /* SceneDelegate.swift */,
 				28463BF724C72ED600EB3AD5 /* ViewController.swift */,
 				28463BF924C72ED600EB3AD5 /* Main.storyboard */,
 				28463BFC24C72ED700EB3AD5 /* Assets.xcassets */,
@@ -77,6 +104,8 @@
 				28463BEC24C72ED600EB3AD5 /* Sources */,
 				28463BED24C72ED600EB3AD5 /* Frameworks */,
 				28463BEE24C72ED600EB3AD5 /* Resources */,
+				2816336024C74DA800B0FA19 /* Embed Frameworks */,
+				2816336124C74DBC00B0FA19 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,14 +162,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2816336124C74DBC00B0FA19 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORKS=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\"${FRAMEWORKS}/SquareReaderSDK.framework/setup\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28463BEC24C72ED600EB3AD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28463BF824C72ED600EB3AD5 /* ViewController.swift in Sources */,
+				28463C0824C7307400EB3AD5 /* PermissionsViewController.swift in Sources */,
 				28463BF424C72ED600EB3AD5 /* AppDelegate.swift in Sources */,
-				28463BF624C72ED600EB3AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +335,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6C5T5HA6B;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestPermissionsRequest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.usv.TestPermissionsRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -304,7 +359,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6C5T5HA6B;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestPermissionsRequest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.usv.TestPermissionsRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

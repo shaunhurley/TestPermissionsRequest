@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4VV-Cj-tdu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="8xh-Na-446">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="ZLm-NV-sCt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TEq-ve-ROX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDH-FI-BGD">
+                                <rect key="frame" x="140" y="429" width="134.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EDH-FI-BGD" firstAttribute="centerX" secondItem="TEq-ve-ROX" secondAttribute="centerX" id="2Sk-IL-Vbg"/>
+                            <constraint firstItem="EDH-FI-BGD" firstAttribute="centerY" secondItem="TEq-ve-ROX" secondAttribute="centerY" id="oLM-tl-o7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ii-Vo-eih"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eQ5-8V-AQ6"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78y-Lr-5lb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-128.98550724637681" y="112.5"/>
+        </scene>
+        <!--Permissions View Controller-->
+        <scene sceneID="Lse-O5-Waq">
+            <objects>
+                <viewController storyboardIdentifier="PermissionsViewController" id="hev-aC-OHJ" customClass="PermissionsViewController" customModule="TestPermissionsRequest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e51-5N-IXH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjP-Uj-Ar5">
+                                <rect key="frame" x="114.5" y="433" width="185" height="30"/>
+                                <state key="normal" title="Enable Microphone Access"/>
+                                <connections>
+                                    <action selector="microphoneButtonTapped:" destination="hev-aC-OHJ" eventType="touchUpInside" id="bQn-ec-xTF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-iE-yO6">
+                                <rect key="frame" x="114.5" y="503" width="185" height="30"/>
+                                <state key="normal" title="Enable Location Access"/>
+                                <connections>
+                                    <action selector="locationButtonTapped:" destination="hev-aC-OHJ" eventType="touchUpInside" id="AhL-VY-gf6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vIB-iE-yO6" firstAttribute="width" secondItem="fjP-Uj-Ar5" secondAttribute="width" id="DA1-Rh-rtT"/>
+                            <constraint firstItem="fjP-Uj-Ar5" firstAttribute="centerY" secondItem="e51-5N-IXH" secondAttribute="centerY" id="cOI-t0-ymV"/>
+                            <constraint firstItem="vIB-iE-yO6" firstAttribute="top" secondItem="fjP-Uj-Ar5" secondAttribute="bottom" constant="40" id="e0y-aH-Gna"/>
+                            <constraint firstItem="vIB-iE-yO6" firstAttribute="centerX" secondItem="e51-5N-IXH" secondAttribute="centerX" id="gM9-Gs-gJa"/>
+                            <constraint firstItem="fjP-Uj-Ar5" firstAttribute="centerX" secondItem="e51-5N-IXH" secondAttribute="centerX" id="qIR-1t-YgJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8DY-Q7-NpF"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationButton" destination="vIB-iE-yO6" id="Hlz-dU-P7d"/>
+                        <outlet property="microphoneButton" destination="fjP-Uj-Ar5" id="4Jx-Zd-NmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5c-Ps-sAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UVA-UY-cnb">
+            <objects>
+                <navigationController storyboardIdentifier="paymentsNavigationController" id="4VV-Cj-tdu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bed-mU-UTZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZLm-NV-sCt" kind="relationship" relationship="rootViewController" id="W7J-x3-xeR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKA-Eo-zwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="113"/>
         </scene>
     </scenes>
 </document>
